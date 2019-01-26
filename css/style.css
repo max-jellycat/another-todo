@@ -37,6 +37,9 @@ main {
   font-size: 1rem;
   border-bottom: 1px solid rgba(60, 60, 60, .1);
   transition: all .3s ease;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .todo:hover {
@@ -46,6 +49,16 @@ main {
 
 .todo--title {
   margin: 0;
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: #e74c3c;
 }
 
 .todo--container {

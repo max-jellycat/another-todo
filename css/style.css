@@ -42,8 +42,16 @@ main {
   align-items: center;
 }
 
+.todo a {
+  color: #000;
+}
+
 .todo:hover {
   background-color: #34495e;
+  color: #f4f4f4;
+}
+
+.todo:hover a {
   color: #f4f4f4;
 }
 
@@ -53,7 +61,35 @@ main {
   width: 80%;
 }
 
-.delete-icon {
+.todo--update-form {
+  margin: 0;
+  width: 80%;
+}
+
+.todo--update-form input {
+  margin: 0;
+}
+
+.todo--update-form input[type="text"] {
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+input.update-btn {
+  background: transparent;
+  color: #2ecc71;
+  border-color: #2ecc71;
+  transition: all .3s ease;
+  margin-left: 1rem;
+}
+
+input.update-btn:hover {
+  background: #2ecc71;
+  border-color: #2ecc71;
+  color: #f4f4f4;
+}
+
+.icon {
   cursor: pointer;
 }
 
@@ -109,4 +145,8 @@ main {
 .modal--title {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.is-hidden {
+  display: none;
 }

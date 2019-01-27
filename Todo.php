@@ -35,4 +35,15 @@
 
       header("Location: index.php");
     }
+
+    public function update($data) {
+      if($data) {
+        $this->db->query('UPDATE todos SET title=:title WHERE id=:id');
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':title', $data['title']);
+        return $this->db->execute();
+      } else {
+        return false;
+      }
+    }
   }

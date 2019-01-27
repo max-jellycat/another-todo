@@ -7,8 +7,6 @@
 
   $todo = new Todo();
   $todos = $todo->getTodos();
-
-  session_start();
 ?>
 
 <!DOCTYPE html>

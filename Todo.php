@@ -13,6 +13,11 @@
       return $this->db->resultSet();
     }
 
+    public function getTodo($id) {
+      $this->query('SELECT * FROM todos where id = $id');
+      return $this->db->single();
+    }
+
     public function add($data) {
       if(!empty($data)) {
         $this->db->query('INSERT INTO todos (title) VALUES (:todo)');
@@ -21,5 +26,13 @@
 
         header('Location: index.php');
       }
+    }
+
+    public function delete($id) {
+      $this->db->query('DELETE FROM todos WHERE id = :id');
+      $this->db->bind(':id', $id);
+      $this->db->execute();
+
+      header("Location: index.php");
     }
   }

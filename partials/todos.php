@@ -3,9 +3,9 @@
     <?php foreach($todos as $t): ?>
     <div class="todo">
       <p class="todo--title"><?= $t->title ?></p>
-      <span class="icon">
+      <a href="delete.php?id=<?= $t->id ?>" class="icon">
         <i class="fas fa-trash-alt delete-icon"></i>
-      </span> 
+      </a> 
     </div>
     <?php endforeach; ?>
   </div>
